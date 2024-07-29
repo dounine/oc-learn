@@ -79,5 +79,7 @@ public class FloatBtn: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func tapSelf() {}
+    @objc func tapSelf() {
+        print("click")
+    }
 }
