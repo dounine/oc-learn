@@ -21,8 +21,7 @@ public class FloatBtn: UIView {
         self.addGestureRecognizer(tap)
         self.backgroundColor = .red
         self.layer.cornerRadius = frame.width / 2
-        let window = UIApplication.shared.windows.last
-        if let window = window {
+        if let window = window() {
             self.safeAreaTop = window.safeAreaInsets.top
             self.safeAreaBottom = window.safeAreaInsets.bottom
         }
@@ -97,11 +96,6 @@ public class FloatBtn: UIView {
         let swiftUiView = SwiftUIView()
         let swiftController = UIHostingController(rootView: swiftUiView)
         swiftController.modalPresentationStyle = .overCurrentContext // 全屏显示
-        let transition = CATransition()
-        transition.duration = 0.3
-        transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromRight
-        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         if let wc = window() {
             if let rootController = wc.rootViewController {
                 rootController.present(swiftController, animated: true, completion: nil)

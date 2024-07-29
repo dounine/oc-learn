@@ -19,7 +19,7 @@ struct SwiftUIView: View {
             .navigationTitle(Text("ipa小程序"))
             .navigationBarBackButtonHidden()
             .navigationBarTitleDisplayMode(.large)
-            .navigationBarItems(trailing: Button {
+            .navigationBarItems(leading: Button {
                 self.mode.wrappedValue.dismiss()
             } label: {
                 Image(systemName: "chevron.backward")
