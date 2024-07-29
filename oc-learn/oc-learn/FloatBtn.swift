@@ -9,6 +9,8 @@ import UIKit
 @available(iOS 13.0,*)
 public class FloatBtn: UIView {
     var startLocation: CGPoint?
+    var safeAreaTop: CGFloat = 0 // 顶部安全距离
+    var safeAreaBottom: CGFloat = 0 // 底部安全距离
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,6 +19,11 @@ public class FloatBtn: UIView {
         self.addGestureRecognizer(tap)
         self.backgroundColor = .red
         self.layer.cornerRadius = frame.width / 2
+        let window = UIApplication.shared.windows.last
+        if let window = window {
+            self.safeAreaTop = window.safeAreaInsets.top
+            self.safeAreaBottom = window.safeAreaInsets.bottom
+        }
     }
 
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -49,8 +56,8 @@ public class FloatBtn: UIView {
             return
         }
         let pointer = self.center // 按钮中心点
-        var y = max(self.frame.origin.y, 0) // 防止超出顶部
-        y = min(superview.frame.height - self.frame.height, y) // 防止超出底部
+        var y = max(self.frame.origin.y, self.safeAreaTop) // 防止超出顶部
+        y = min(superview.frame.height - self.frame.height - self.safeAreaBottom, y) // 防止超出底部
         if pointer.x > superview.bounds.width / 2 { // 滑动到右边
             UIView.animate(withDuration: 0.2, animations: { [weak self] in
                 guard let self = self else { return }
