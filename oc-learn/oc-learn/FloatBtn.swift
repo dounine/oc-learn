@@ -6,6 +6,7 @@ import UIKit
     }
 }
 
+@available(iOS 13.0,*)
 public class FloatBtn: UIView {
     var startLocation: CGPoint?
 
