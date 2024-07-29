@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2147AC4B2C574D3500E1D105 /* FloatBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147AC4A2C574D3500E1D105 /* FloatBtn.swift */; };
+		2147AC4D2C5787C300E1D105 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147AC4C2C5787C300E1D105 /* SwiftUIView.swift */; };
 		21F05CCB2C5734A6001355CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F05CCA2C5734A6001355CC /* AppDelegate.m */; };
 		21F05CCE2C5734A6001355CC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F05CCD2C5734A6001355CC /* SceneDelegate.m */; };
 		21F05CD12C5734A6001355CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F05CD02C5734A6001355CC /* ViewController.m */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		2147AC492C574D3400E1D105 /* oc-learn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "oc-learn-Bridging-Header.h"; sourceTree = "<group>"; };
 		2147AC4A2C574D3500E1D105 /* FloatBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatBtn.swift; sourceTree = "<group>"; };
+		2147AC4C2C5787C300E1D105 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		21F05CC62C5734A6001355CC /* oc-learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "oc-learn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F05CC92C5734A6001355CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21F05CCA2C5734A6001355CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				21F05CE32C573633001355CC /* View2.m */,
 				2147AC4A2C574D3500E1D105 /* FloatBtn.swift */,
 				2147AC492C574D3400E1D105 /* oc-learn-Bridging-Header.h */,
+				2147AC4C2C5787C300E1D105 /* SwiftUIView.swift */,
 			);
 			path = "oc-learn";
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21F05CD12C5734A6001355CC /* ViewController.m in Sources */,
+				2147AC4D2C5787C300E1D105 /* SwiftUIView.swift in Sources */,
 				21F05CCB2C5734A6001355CC /* AppDelegate.m in Sources */,
 				21F05CE42C573633001355CC /* View2.m in Sources */,
 				2147AC4B2C574D3500E1D105 /* FloatBtn.swift in Sources */,

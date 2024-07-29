@@ -1,3 +1,5 @@
+import Foundation
+import SwiftUI
 import UIKit
 
 @objc public class FloatBtnBuilder: NSObject {
@@ -87,7 +89,23 @@ public class FloatBtn: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    private func window() -> UIWindow? {
+        return UIApplication.shared.windows.last
+    }
+
     @objc func tapSelf() {
-        print("click")
+        let swiftUiView = SwiftUIView()
+        let swiftController = UIHostingController(rootView: swiftUiView)
+        swiftController.modalPresentationStyle = .overCurrentContext // 全屏显示
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        if let wc = window() {
+            if let rootController = wc.rootViewController {
+                rootController.present(swiftController, animated: true, completion: nil)
+            }
+        }
     }
 }
